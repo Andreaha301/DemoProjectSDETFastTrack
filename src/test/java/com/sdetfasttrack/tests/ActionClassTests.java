@@ -6,6 +6,11 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 import static org.testng.Assert.assertTrue;
 
 public class ActionClassTests {
@@ -14,6 +19,10 @@ public class ActionClassTests {
 
     @Test
     public void actionsTest1() throws InterruptedException {
+        List<String> list=new ArrayList<>(Arrays.asList("January","February"));
+        Collections.shuffle(list);
+        String month=list.get(0);
+        System.out.println("month = " + month);
         //TC#1
         //1. Go to http://practice.cybertekschool.com/hovers
         Driver.getDriver().get("http://practice.cybertekschool.com/hovers");
